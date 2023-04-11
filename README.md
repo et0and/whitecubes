@@ -1,5 +1,7 @@
 # Whitecubes
 
+![Screenshot of Whitecubes](whitecubes.png)
+
 This web app displays a map of public art galleries in Tāmaki Makaurau, Aotearoa using Leaflet JS. Each gallery is represented by a marker, and clicking on a marker reveals a popup with the gallery's name, description, and address.
 
 ## Features

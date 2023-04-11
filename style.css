@@ -21,4 +21,8 @@ body {
       line-height: 1.2;
     }
   }
-  
+
+.leaflet-container {
+    transform: none !important;
+  }
+    

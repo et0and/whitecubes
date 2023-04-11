@@ -17,7 +17,7 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-fetch('whitecubes.json')
+fetch('whitecubes.geojson')
   .then((response) => response.json())
   .then((galleries) => {
     galleries.forEach((gallery) => {
@@ -26,7 +26,7 @@ fetch('whitecubes.json')
       marker.bindPopup(`<b>${gallery.name}</b><br>${gallery.description}`);
     });
   });
-  
+
   class TitleControl extends L.Control {
     onAdd(map) {
       const title = L.DomUtil.create('div');

@@ -3,20 +3,6 @@ const defaultZoom = isMobile ? 12 : 13;
 const map = L.map('map').setView([-36.8485, 174.7633], defaultZoom);
 const titleControl = new TitleControl({ position: 'bottomleft' });
 titleControl.addTo(map);
-
-class TitleControl extends L.Control {
-    onAdd(map) {
-      const title = L.DomUtil.create('div');
-  
-      title.innerHTML = 'Whitecubes'; // Set the title text
-      title.style.fontSize = '18px'; // Adjust font size as needed
-      title.style.fontWeight = 'bold'; // Set font weight
-      title.style.color = '#000'; // Set text color
-      title.style.margin = '10px'; // Add some margin for a better look
-  
-      return title;
-    }
-  }
   
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -31,3 +17,17 @@ fetch('whitecubes.geojson')
       },
     }).addTo(map);
   });
+
+  class TitleControl extends L.Control {
+    onAdd(map) {
+      const title = L.DomUtil.create('div');
+  
+      title.innerHTML = 'Whitecubes'; // Set the title text
+      title.style.fontSize = '18px'; // Adjust font size as needed
+      title.style.fontWeight = 'bold'; // Set font weight
+      title.style.color = '#000'; // Set text color
+      title.style.margin = '10px'; // Add some margin for a better look
+  
+      return title;
+    }
+  }

@@ -11,7 +11,7 @@ fetch('whitecubes.geojson')
   .then((geojsonData) => {
     L.geoJSON(geojsonData, {
       onEachFeature: function (feature, layer) {
-        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}<br><i>${feature.properties.address}</i>`);
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}<br><br><i>${feature.properties.address}</i>`);
       },
     }).addTo(map);
   });

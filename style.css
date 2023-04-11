@@ -7,3 +7,18 @@ body {
   height: 100vh;
   width: 100%;
 }
+
+/* Default popup styles */
+.leaflet-popup-content-wrapper {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  /* Popup styles for smaller screens */
+  @media (max-width: 480px) {
+    .leaflet-popup-content-wrapper {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+  
